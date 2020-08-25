@@ -4,6 +4,7 @@ export const GlobalStyle = createGlobalStyle`
   html,
   body {
     background-color: ${({ theme }) => theme.colors.primary};
+    overflow: hidden;
   }
   
   * {
