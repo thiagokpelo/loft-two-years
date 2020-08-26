@@ -15,7 +15,8 @@ export const Webcam = () => {
 
   const capture = useCallback(() => {
     const response = webcamRef.current
-      ? webcamRef.current.getScreenshot()
+      ? // @ts-ignore
+        webcamRef.current.getScreenshot()
       : null;
 
     setImageSrc(response);
@@ -23,7 +24,7 @@ export const Webcam = () => {
     window.alert("Fotinhoooo");
   }, [webcamRef]);
 
-  console.log(image);
+  console.log(image, capture);
 
   return (
     <Wrapper>
