@@ -8,6 +8,9 @@ declare module "styled-components" {
       primary: string;
       secondary?: string;
       transparent: "transparent";
+      common?: {
+        white?: string;
+      };
     };
   }
 }

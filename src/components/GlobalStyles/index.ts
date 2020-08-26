@@ -5,6 +5,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     background-color: ${({ theme }) => theme.colors.transparent};
     overflow: hidden;
+    font-family: sans-serif;
   }
   
   * {

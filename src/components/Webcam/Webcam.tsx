@@ -5,9 +5,9 @@ import React, {
   useRef,
   useState,
 } from "react";
-import WebcamComponent from "react-webcam";
 
-import { Wrapper } from "./Webcam.styles";
+import { WebcamFixed, Wrapper } from "./Webcam.styles";
+import { Button, Link } from "../Button";
 
 const videoConstraints = {
   width: 300,
@@ -18,7 +18,7 @@ const videoConstraints = {
 // eslint-disable-next-line react/display-name
 export const Webcam: ForwardRefExoticComponent<any> = forwardRef((_, ref) => {
   const webcamRef = useRef(null);
-  const [image, setImageSrc] = useState(null);
+  const [image, setImageSrc] = useState("");
 
   const capture = useCallback(() => {
     const response = webcamRef.current
@@ -26,23 +26,29 @@ export const Webcam: ForwardRefExoticComponent<any> = forwardRef((_, ref) => {
         webcamRef.current.getScreenshot()
       : null;
 
-    setImageSrc(response);
-
-    window.alert("Fotinhoooo");
+    setImageSrc(`data:image/jpeg;base64${response}`);
   }, [webcamRef]);
 
-  console.log(image, capture);
-
   return (
-    <Wrapper ref={ref}>
-      <WebcamComponent
-        audio={false}
-        height={554}
-        ref={webcamRef}
-        screenshotFormat="image/jpeg"
-        width={300}
-        videoConstraints={videoConstraints}
-      />
-    </Wrapper>
+    <>
+      <Wrapper ref={ref}>
+        <WebcamFixed
+          audio={false}
+          height={554}
+          ref={webcamRef}
+          screenshotFormat="image/jpeg"
+          width={300}
+          videoConstraints={videoConstraints}
+        />
+        <Button onClick={capture} variant="solid">
+          Tirar foto
+        </Button>
+        {image && (
+          <Link download="FILENAME.jpeg" href={image}>
+            Download
+          </Link>
+        )}
+      </Wrapper>
+    </>
   );
 });

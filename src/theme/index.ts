@@ -7,6 +7,9 @@ const theme: DefaultTheme = {
     primary: "#FF7744",
     secondary: "#171717",
     transparent: "transparent",
+    common: {
+      white: "#fff",
+    },
   },
 };
 
