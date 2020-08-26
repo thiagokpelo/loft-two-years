@@ -10,8 +10,8 @@ import WebcamComponent from "react-webcam";
 import { Wrapper } from "./Webcam.styles";
 
 const videoConstraints = {
-  width: 1280,
-  height: 720,
+  width: 300,
+  height: 554,
   facingMode: "user",
 };
 
