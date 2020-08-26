@@ -1,4 +1,10 @@
-import React, { useCallback, useRef, useState } from "react";
+import React, {
+  forwardRef,
+  ForwardRefExoticComponent,
+  useCallback,
+  useRef,
+  useState,
+} from "react";
 import WebcamComponent from "react-webcam";
 
 import { Wrapper } from "./Webcam.styles";
@@ -9,7 +15,8 @@ const videoConstraints = {
   facingMode: "user",
 };
 
-export const Webcam = () => {
+// eslint-disable-next-line react/display-name
+export const Webcam: ForwardRefExoticComponent<any> = forwardRef((_, ref) => {
   const webcamRef = useRef(null);
   const [image, setImageSrc] = useState(null);
 
@@ -27,15 +34,15 @@ export const Webcam = () => {
   console.log(image, capture);
 
   return (
-    <Wrapper>
+    <Wrapper ref={ref}>
       <WebcamComponent
         audio={false}
         height={554}
         ref={webcamRef}
         screenshotFormat="image/jpeg"
-        width={250}
+        width={300}
         videoConstraints={videoConstraints}
       />
     </Wrapper>
   );
-};
+});
