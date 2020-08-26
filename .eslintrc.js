@@ -29,6 +29,7 @@ module.exports = {
         args: "none",
       },
     ],
+    "react/prop-types": "off",
   },
   settings: {
     "import/resolver": {
