@@ -7,6 +7,8 @@ export const Background = styled.main<{
   background?: any;
   position?: string;
 }>`
+  position: relative;
+  padding: 20px;
   align-items: center;
   background-color: ${({ theme }) => theme.colors.primary};
   display: flex;
