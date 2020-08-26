@@ -6,6 +6,7 @@ const theme: DefaultTheme = {
   colors: {
     primary: "#FF7744",
     secondary: "#171717",
+    transparent: "transparent",
   },
 };
 

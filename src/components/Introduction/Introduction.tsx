@@ -1,5 +1,5 @@
-import { Timeline } from "react-gsap";
-import React, { forwardRef, ForwardRefExoticComponent } from "react";
+import { Timeline, Tween } from "react-gsap";
+import React, { FC } from "react";
 import { Logo } from "../Logo";
 import {
   Brazil,
@@ -9,25 +9,36 @@ import {
   SaoPaulo,
   Unicorn,
 } from "../Illustrations";
-
-// "https://res.cloudinary.com/thiagokpelo/image/upload/v1598391872/RJ_fbqsa3.png"
+import { Background } from "./Introduction.styles";
+import { theme } from "../../theme";
 
 // eslint-disable-next-line react/display-name
-export const Introduction: ForwardRefExoticComponent<any> = forwardRef(() => {
+export const Introduction: FC = ({ children }) => {
   return (
     <Timeline
       labels={[
-        { label: "start", position: 1 },
-        { label: "secondary", position: 2 },
+        { label: "start", position: 0 },
+        { label: "secondary", position: 0.5 },
+        { label: "background", position: 1 },
+        { label: "logoToHeader", position: 1 },
       ]}
     >
-      <Logo />
-      <RioDeJaneiro />
-      <Unicorn />
-      <Cubes />
-      <SaoPaulo />
-      <Brazil />
-      <Hourglass />
+      <Tween
+        position="background"
+        duration={1}
+        to={{ background: theme.colors.secondary }}
+      >
+        <Background>
+          <Logo />
+          <RioDeJaneiro />
+          <Unicorn />
+          <Cubes />
+          <SaoPaulo />
+          <Brazil />
+          <Hourglass />
+          {children}
+        </Background>
+      </Tween>
     </Timeline>
   );
-});
+};

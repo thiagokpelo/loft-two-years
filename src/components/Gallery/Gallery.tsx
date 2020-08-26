@@ -1,3 +1,8 @@
+import React from "react";
+
+import { Webcam } from "../Webcam";
+
 export const Gallery = () => {
-  return <button>Tirar foto</button>;
+  // return <Webcam />;
+  return null;
 };
