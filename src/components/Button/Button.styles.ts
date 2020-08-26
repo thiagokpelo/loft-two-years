@@ -6,7 +6,7 @@ export const Button = styled.button<{ variant?: "solid" | "outline" }>`
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 300px;
+  max-width: 200px;
   border: ${({ theme, variant }) =>
     variant === "solid" ? "none" : `2px solid ${theme.colors.primary}`};
   border-radius: 12px;

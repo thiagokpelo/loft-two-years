@@ -10,7 +10,7 @@ import { WebcamFixed, Wrapper } from "./Webcam.styles";
 import { Button, Link } from "../Button";
 
 const videoConstraints = {
-  width: 300,
+  width: 435,
   height: 554,
   facingMode: "user",
 };
@@ -37,7 +37,7 @@ export const Webcam: ForwardRefExoticComponent<any> = forwardRef((_, ref) => {
           height={554}
           ref={webcamRef}
           screenshotFormat="image/jpeg"
-          width={300}
+          width={435}
           videoConstraints={videoConstraints}
         />
         <Button onClick={capture} variant="solid">
