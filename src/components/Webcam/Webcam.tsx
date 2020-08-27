@@ -74,10 +74,10 @@ export const Webcam: ForwardRefExoticComponent<any> = forwardRef((_, ref) => {
           <>
             <WebcamFixed
               audio={false}
-              height={554}
+              height="100%"
               ref={webcamRef}
               screenshotFormat="image/jpeg"
-              width={435}
+              width="auto"
               videoConstraints={videoConstraints}
             />
             <ImageFixed

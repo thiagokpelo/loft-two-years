@@ -1,6 +1,6 @@
 export const videoConstraints = {
-  width: 435,
-  height: 554,
+  width: 870,
+  height: 1108,
   facingMode: "user",
 };
 
