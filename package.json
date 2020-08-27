@@ -8,6 +8,7 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "@react-hook/media-query": "^1.1.1",
     "gsap": "^3.5.0",
     "merge-images": "^2.0.0",
     "next": "latest",
