@@ -1,11 +1,11 @@
 export const videoConstraints = {
-  width: 870,
-  height: 1108,
+  width: 565,
+  height: 1200,
   facingMode: "user",
 };
 
 export const opts = {
   format: "image/jpeg",
-  quality: 0.9,
+  quality: 1,
   crossOrigin: "anonymous",
 };
