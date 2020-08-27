@@ -1,10 +1,18 @@
-import React, { forwardRef, ForwardRefExoticComponent } from "react";
+import React, { forwardRef, ForwardRefExoticComponent, useMemo } from "react";
 
 import { Image } from "../Image";
+import { useBreakpoints } from "../../hooks";
 
 // eslint-disable-next-line react/display-name
 export const RioDeJaneiro: ForwardRefExoticComponent<any> = forwardRef(
   (_, ref) => {
+    const matches = useBreakpoints();
+
+    const to = useMemo(
+      () => (matches ? { top: 122, left: 236 } : { top: 50, left: -150 }),
+      [matches]
+    );
+
     return (
       <Image
         alt="Cidade do Rio de Janeiro"
@@ -15,7 +23,7 @@ export const RioDeJaneiro: ForwardRefExoticComponent<any> = forwardRef(
         ref={ref}
         src="https://res.cloudinary.com/thiagokpelo/image/upload/v1598391872/RJ_fbqsa3.png"
         stylePosition="absolute"
-        to={{ top: 122, left: 236 }}
+        to={to}
         width="270px"
       />
     );

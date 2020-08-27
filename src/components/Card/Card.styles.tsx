@@ -15,4 +15,8 @@ export const Card = styled.div<{ image?: any; ref?: any }>`
   background-size: cover;
   background: rgba(255, 255, 255, 0.1) url(${({ image }) => image}) center;
   border-radius: 20px;
+
+  @media only screen and (max-width: 375px) {
+    max-height: 400px;
+  }
 `;

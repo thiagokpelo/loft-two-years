@@ -14,6 +14,7 @@ import {
   createTemplateOne,
 } from "../../utils/create-templates";
 import { Card } from "../Card";
+import { getCameraPermission } from "../../utils/camera-permissions";
 
 // eslint-disable-next-line react/display-name
 export const Webcam: ForwardRefExoticComponent<any> = forwardRef((_, ref) => {
@@ -31,6 +32,12 @@ export const Webcam: ForwardRefExoticComponent<any> = forwardRef((_, ref) => {
   };
 
   const capture = useCallback(async () => {
+    const hasCameraPermission = await getCameraPermission();
+
+    console.log("hasCameraPermission", hasCameraPermission);
+
+    if (!hasCameraPermission) return "";
+
     const response = webcamRef.current
       ? // @ts-ignore
         webcamRef.current.getScreenshot()
