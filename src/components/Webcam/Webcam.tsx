@@ -6,7 +6,7 @@ import React, {
   useState,
 } from "react";
 
-import { Preview, WebcamFixed, Wrapper } from "./Webcam.styles";
+import { ImageFixed, Preview, WebcamFixed, Wrapper } from "./Webcam.styles";
 import { Button, Link } from "../Button";
 import { videoConstraints } from "./constants";
 import {
@@ -71,6 +71,21 @@ export const Webcam: ForwardRefExoticComponent<any> = forwardRef((_, ref) => {
               screenshotFormat="image/jpeg"
               width={435}
               videoConstraints={videoConstraints}
+            />
+            <ImageFixed
+              top={20}
+              left={160}
+              src="https://res.cloudinary.com/thiagokpelo/image/upload/c_scale,w_120/v1598391872/LOFT_jq1mef.png"
+            />
+            <ImageFixed
+              top={50}
+              left={320}
+              src="https://res.cloudinary.com/thiagokpelo/image/upload/v1598391872/brasil_v1o2ny.png"
+            />
+            <ImageFixed
+              top={30}
+              left={10}
+              src="https://res.cloudinary.com/thiagokpelo/image/upload/c_scale,w_111/a_25/v1598391872/Cubos_xzusea.png"
             />
             <Button onClick={capture} variant="solid">
               Tirar foto
