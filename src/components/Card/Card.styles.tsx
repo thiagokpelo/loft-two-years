@@ -13,7 +13,7 @@ export const Card = styled.div<{ image?: any; ref?: any }>`
   overflow: hidden;
   padding: 20px 20px 40px;
   background-size: cover;
-  background: rgba(255, 255, 255, 0.9) url(${({ image }) => image}) center;
+  background: transparent url(${({ image }) => image}) center;
   border-radius: 20px;
 
   @media only screen and (max-width: 375px) {
