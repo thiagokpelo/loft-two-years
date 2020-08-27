@@ -11,6 +11,12 @@ export const createTemplateOne = (picture: string) =>
       },
       {
         src:
+          "https://res.cloudinary.com/thiagokpelo/image/upload/v1598549965/inershadow_dwisxs.png",
+        x: 0,
+        y: 0,
+      },
+      {
+        src:
           "https://res.cloudinary.com/thiagokpelo/image/upload/c_scale,w_120/v1598391872/LOFT_jq1mef.png",
         x: 160,
         y: 20,
