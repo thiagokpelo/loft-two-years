@@ -6,6 +6,5 @@ export const videoConstraints = {
 
 export const opts = {
   format: "image/jpeg",
-  quality: 1,
   crossOrigin: "anonymous",
 };

@@ -8,8 +8,8 @@ export const Card = styled.div<{ image?: any; ref?: any }>`
   align-items: center;
   width: 100%;
   height: 100%;
-  max-width: 435px;
-  max-height: 554px;
+  max-width: 430px;
+  max-height: 550px;
   overflow: hidden;
   padding: 20px 20px 40px;
   background-size: cover;
