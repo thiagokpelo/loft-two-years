@@ -73,7 +73,9 @@ export const Webcam: ForwardRefExoticComponent<any> = forwardRef((_, ref) => {
         ) : (
           <>
             <WebcamFixed
+              mirrored={true}
               audio={false}
+              forceScreenshotSourceSize={true}
               height="100%"
               ref={webcamRef}
               screenshotFormat="image/jpeg"
