@@ -18,6 +18,8 @@ export const Button = styled.button<{ variant?: "solid" | "outline" }>`
   z-index: 1;
   text-transform: uppercase;
   outline: none;
+  cursor: pointer;
+  text-decoration: none;
 `;
 
 export const Link = styled.a`
@@ -29,4 +31,8 @@ export const Link = styled.a`
   text-align: center;
   margin-top: 24px;
   font-size: 12px;
+  background-color: ${({ theme }) => theme.colors.transparent};
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
 `;
