@@ -16,17 +16,16 @@ export const Button = styled.button<{ variant?: "solid" | "outline" }>`
   color: ${({ theme, variant }) =>
     variant === "solid" ? theme.colors.common?.white : theme.colors.primary};
   z-index: 1;
-  text-transform: uppercase;
   outline: none;
   cursor: pointer;
   text-decoration: none;
+  font-size: 16px;
 `;
 
 export const Link = styled.a`
   position: relative;
   color: ${({ theme }) => theme.colors.common?.white};
   z-index: 1;
-  text-transform: uppercase;
   outline: none;
   text-align: center;
   margin-top: 24px;
