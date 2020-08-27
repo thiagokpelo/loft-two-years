@@ -6,13 +6,14 @@ import React, {
   useState,
 } from "react";
 
-import { ImageFixed, Preview, WebcamFixed, Wrapper } from "./Webcam.styles";
+import { ImageFixed, Preview, WebcamFixed } from "./Webcam.styles";
 import { Button, Link } from "../Button";
 import { videoConstraints } from "./constants";
 import {
   createFilenameWithHash,
   createTemplateOne,
 } from "../../utils/create-templates";
+import { Card } from "../Card";
 
 // eslint-disable-next-line react/display-name
 export const Webcam: ForwardRefExoticComponent<any> = forwardRef((_, ref) => {
@@ -46,7 +47,7 @@ export const Webcam: ForwardRefExoticComponent<any> = forwardRef((_, ref) => {
 
   return (
     <>
-      <Wrapper ref={ref}>
+      <Card ref={ref}>
         {image ? (
           <>
             <Preview image={image} />
@@ -92,7 +93,7 @@ export const Webcam: ForwardRefExoticComponent<any> = forwardRef((_, ref) => {
             </Button>
           </>
         )}
-      </Wrapper>
+      </Card>
     </>
   );
 });
