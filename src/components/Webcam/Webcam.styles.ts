@@ -37,8 +37,9 @@ export const Wrapper = styled.div<{ image?: any; ref?: any }>`
   justify-content: flex-end;
   align-items: center;
   width: 100%;
+  height: 100%;
   max-width: 435px;
-  height: 554px;
+  max-height: 554px;
   overflow: hidden;
   padding: 20px 20px 40px;
   background-size: cover;
